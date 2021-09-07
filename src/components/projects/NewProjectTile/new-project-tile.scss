@@ -1,0 +1,23 @@
+@import "../../../helpers/variables";
+.new-project-tile {
+  margin-left: -10px;
+  margin-right: -10px;
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card {
+    min-height: 315px;
+    margin-bottom: 20px;
+    .card-body {
+      flex: 0 1 auto;
+      .card-title {
+        margin-bottom: 26px;
+      }
+      .card-subtitle {
+        margin-bottom: 33px;
+        color: map-get($theme-colors, greyColor2);
+      }
+    }
+  }
+}

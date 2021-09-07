@@ -1,0 +1,86 @@
+// colors
+$theme-colors: (
+  "primary": #00adee,
+  "secondary": #2d3543,
+  "danger": #f5222d,
+  "danger2": #ff0000,
+  "purpleColor": #722ed1,
+  "darkColor": #333c4d,
+  "lightBlueColor": #4a576b,
+  "greenColor": #5cc469,
+  "GreyColor": #40444b,
+  "inputBorderColor": #dddddd,
+  "inputPlaceholderColor": #a9b2c4,
+  "lightBlueColor2": #616d80,
+  "greyColor2": #7f8998,
+  "greyColor3": #535760,
+  "hoverBorder": #a6b1c0,
+  "whiteBlue": #f9fafe,
+  "selectBorderColor": #dae1ed,
+  "inProgressBg": #deeeff,
+  "inProgressText": #1c78e0,
+  "lighterGreyColor": #686c78,
+  "orangeColor": #faad14,
+  "headerColor": #f6f8fd,
+  "SkyblueColor": #00b4f3,
+  "lightBlueColor3": #8a94a3,
+  "robinEggBlue": #13c2c2,
+  "carrotOrange": #fa8c16,
+  "blanchedAlmondColor": #feedcb,
+  "neroColor": #262626,
+  "solitude": #e3e7f2,
+  "nightRider": #2b2b2b,
+);
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1170px,
+);
+
+$yiq-contrasted-threshold: 170;
+
+// fonts base
+$font-family-base: "Roboto", sans-serif;
+$font-size-base: 0.875rem;
+
+// border radius base
+$border-radius-base: 5px;
+
+// links
+$link-color: map-get($theme-colors, "primary");
+$link-hover-decoration: none;
+
+// Headings
+$h1-font-size: 52px;
+$h2-font-size: 48px;
+$h3-font-size: 42px;
+$h4-font-size: 28px;
+$h5-font-size: 24px;
+$h6-font-size: 22px;
+// $headings-color: ;
+
+// Input
+$input-height: 45px;
+$input-border-radius: 5px;
+$input-border-color: map-get($theme-colors, inputBorderColor);
+$input-placeholder-color: map-get($theme-colors, inputPlaceholderColor);
+$input-focus-box-shadow: none;
+$input-btn-padding-x: 1.1875rem;
+// $input-focus-border-color: map-get($theme-colors,hoverBorder);
+
+// form group
+$form-group-margin-bottom: 10px;
+
+// buttons
+$btn-border-radius: 5px;
+$btn-padding-y: 12px;
+$btn-padding-x: 26px;
+
+$btn-padding-y-sm: 4px;
+$btn-padding-x-sm: 6px;
+$btn-border-radius-sm: 3px;
+$btn-font-size-sm: 10px;
+
+// $modal-fade-transform: scale(.6);

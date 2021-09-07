@@ -1,0 +1,74 @@
+.modal.fade .modal-dialog {
+  transition: -webkit-transform 0.3s ease-out !important;
+  transition: transform 0.3s ease-out !important;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out !important;
+}
+.modal-backdrop.show {
+  opacity: 0.79;
+}
+.modal-open .modal {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.modal-backdrop {
+  background-color: rgba($color: #d8d8d8, $alpha: 1);
+}
+.close {
+  opacity: 1;
+}
+.modal-content {
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.09);
+  .modal-header {
+    border: 0;
+  }
+  .modal-footer {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 24px;
+    .btn {
+      font-size: 15px;
+    }
+    .btn-cancel {
+      border: 1px solid #dddddd;
+    }
+  }
+}
+.modal-dialog {
+  @media (min-width: 576px) {
+    max-width: 580px;
+  }
+}
+
+// confirmation modal styling
+.confirmation-modal {
+  .modal-content {
+    .modal-header {
+      padding: 24px 24px 28px 24px;
+      h5 {
+        line-height: 32px;
+      }
+    }
+    .modal-body {
+      padding-left: 24px;
+      padding-top: 0;
+      padding-right: 18px;
+      padding-bottom: 90px;
+      p,
+      span {
+        font-size: 18px;
+        @media (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// modal animation
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: opacity 0.1s ease;
+  }
+}

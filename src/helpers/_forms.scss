@@ -1,0 +1,38 @@
+// placeholder mixin
+@include inputPlaceholder() {
+  font-size: 13px;
+}
+
+.form-control {
+  &:hover {
+    border-color: #00adee !important;
+  }
+}
+.select-box {
+  position: relative;
+  height: 40px;
+  .form-control {
+    height: 40px;
+    border: 1px solid #dae1ed;
+    border-radius: 2px;
+    color: #7f8998;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 34px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  &::after {
+    position: absolute;
+    content: " ";
+    background: url("../assets/icons/arrow-down.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+    height: 6px;
+    width: 11px;
+  }
+}

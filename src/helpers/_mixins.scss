@@ -1,0 +1,47 @@
+@function toRem($fontsize) {
+  $remSize: $fontsize / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin short-name {
+  height: 44px;
+  width: 44px;
+  min-width: 44px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+// placeholder
+@mixin inputPlaceholder() {
+  $selector: "";
+  $prefixes: (
+    moz: "::-moz",
+    webkit: "::-webkit",
+    ie: ":-ms",
+  );
+  @each $prop, $value in $prefixes {
+    @if $prop != "moz" {
+      $selector: #{$value}-input-placeholder;
+    } @else {
+      $selector: #{$value}-placeholder;
+    }
+    @if & {
+      &#{$selector} {
+        @content;
+      }
+    } @else {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+  &::placeholder {
+    @content;
+  }
+}

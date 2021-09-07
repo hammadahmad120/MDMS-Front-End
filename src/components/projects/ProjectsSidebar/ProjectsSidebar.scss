@@ -1,0 +1,251 @@
+@import "../../../helpers/variables";
+.projects-sidenavbar {
+  .toggle-nav {
+    border: none;
+    border-radius: none;
+    margin-bottom: 5px;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    &:focus {
+      outline: none;
+    }
+    @media (min-width: 601px) {
+      display: none;
+    }
+    #nav-icon2 {
+      width: 30px;
+      height: 15px;
+      position: relative;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    #nav-icon2 span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 50%;
+      background: #2d3543;
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+    #nav-icon2 {
+    }
+    #nav-icon2 span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 9px 9px 0;
+    }
+
+    #nav-icon2 span:nth-child(odd) {
+      left: 0px;
+      border-radius: 9px 0 0 9px;
+    }
+
+    #nav-icon2 span:nth-child(1),
+    #nav-icon2 span:nth-child(2) {
+      top: 0px;
+    }
+
+    #nav-icon2 span:nth-child(3),
+    #nav-icon2 span:nth-child(4) {
+      top: 8px;
+    }
+
+    #nav-icon2 span:nth-child(5),
+    #nav-icon2 span:nth-child(6) {
+      top: 16px;
+    }
+
+    &.open {
+      margin-bottom: 13px;
+      #nav-icon2 span:nth-child(1),
+      #nav-icon2 span:nth-child(6) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      #nav-icon2 span:nth-child(2),
+      #nav-icon2 span:nth-child(5) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      #nav-icon2 span:nth-child(1) {
+        left: 5px;
+        top: 5px;
+      }
+
+      #nav-icon2 span:nth-child(2) {
+        left: calc(50% - 3px);
+        top: 5px;
+      }
+
+      #nav-icon2 span:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+      }
+
+      #nav-icon2 span:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+      }
+
+      #nav-icon2 span:nth-child(5) {
+        left: 5px;
+        top: 12px;
+      }
+
+      #nav-icon2 span:nth-child(6) {
+        left: calc(50% - 3px);
+        top: 12px;
+      }
+    }
+  }
+  .side-nav-pane {
+    flex: 0 0 242px;
+    max-width: 242px;
+    padding: 23px 0px 10px 0px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 800;
+    transition: all 0.4s;
+    @media (max-width: 600px) {
+      left: -100%;
+      visibility: hidden;
+    }
+    &.openNav {
+      left: 0;
+      visibility: visible;
+      transition-duration: 0.4s;
+      transition-property: left, visibility;
+      transition-timing-function: linear;
+      box-shadow: 2px 0 39px rgba($color: #706b6b, $alpha: 0.6);
+    }
+    .top-side-nav {
+      padding: 0 15px 37px 21px;
+      border-bottom: 1px solid #cdd9e9;
+      .vertical-nav {
+        .nav-link {
+          padding-left: 0;
+          padding-bottom: 0;
+          padding-top: 27px;
+          font-size: 14px;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          color: map-get($theme-colors, lightBlueColor);
+          &.active {
+            color: map-get($theme-colors, primary);
+            .nav-icon {
+              path,
+              rect,
+              polygon {
+                fill: map-get($theme-colors, primary);
+              }
+            }
+          }
+          &:hover {
+            color: map-get($theme-colors, primary);
+            .nav-icon {
+              path,
+              rect,
+              g {
+                fill: map-get($theme-colors, primary);
+              }
+            }
+          }
+          .nav-icon {
+            margin-right: 17px;
+          }
+        }
+        .notfication-badge {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: " ";
+            height: 6px;
+            width: 6px;
+            background-color: map-get($theme-colors, greenColor);
+            left: 20px;
+            top: 36px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .bottom-side-nav {
+      padding: 0 15px 0px 21px;
+      margin-top: 17px;
+      .user-profile {
+        margin-bottom: 10px;
+        .user-profile-icon {
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          background-color: #a6b1c0;
+          margin-right: 14px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: Roboto;
+          font-size: 12px;
+          color: #ffffff;
+          font-weight: 500;
+        }
+        .user-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: map-get($theme-colors, lightBlueColor);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 145px;
+          line-height: 24px;
+        }
+        .btn-get-access {
+          margin-top: 2px;
+          margin-left: 46px;
+        }
+        .collapse-content {
+          ul {
+            list-style: none;
+            padding-left: 45px;
+            li {
+              margin-bottom: 5px;
+              a,
+              div {
+                font-family: Montserrat;
+                font-weight: 600;
+                color: map-get($theme-colors, lightBlueColor);
+                &:hover {
+                  color: map-get($theme-colors, primary);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

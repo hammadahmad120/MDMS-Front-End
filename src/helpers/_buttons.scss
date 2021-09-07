@@ -1,0 +1,113 @@
+@import "./variables";
+.btn {
+  border: none;
+  white-space: nowrap;
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+.btn-outline-primary {
+  &:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+  }
+}
+button {
+  &:focus {
+    outline: none;
+  }
+}
+.btn-inprogress {
+  background-color: map-get($theme-colors, inProgressBg);
+  color: map-get($theme-colors, inProgressText);
+  text-transform: uppercase;
+  min-width: 82px;
+  cursor: default !important;
+  &:hover {
+    color: map-get($theme-colors, inProgressText);
+  }
+}
+.btn-edited-purple {
+  background-color: map-get($theme-colors, purpleColor);
+  color: #ffff;
+  &:hover {
+    background-color: #651ccc;
+    color: #e9def8;
+  }
+}
+.btn-complete {
+  background-color: map-get($theme-colors, selectBorderColor);
+  color: map-get($theme-colors, lightBlueColor2);
+  text-transform: uppercase;
+  min-width: 82px;
+  cursor: default !important;
+  &:hover {
+    color: map-get($theme-colors, lightBlueColor2);
+  }
+}
+.btn-archive {
+  background-color: #ffe3e3;
+  color: #ff0000;
+  text-transform: uppercase;
+  min-width: 82px;
+  cursor: default !important;
+  &:hover {
+    color: #ff0000;
+  }
+}
+.btn-statuses {
+  min-width: 70px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 4px;
+  border-radius: 3px;
+  &.btn-all {
+    background-color: #e3e7f2;
+    color: #4a576b;
+    &:hover {
+      background-color: #4a576b;
+      color: #e3e7f2;
+    }
+  }
+  &.btn-new {
+    background-color: #ffe2a7;
+    color: #ff7700;
+    &:hover {
+      background-color: #ff7700;
+      color: #ffe2a7;
+    }
+  }
+  &.btn-accepted {
+    background-color: #eaf6de;
+    color: #50b83c;
+    &:hover {
+      background-color: #50b83c;
+      color: #eaf6de;
+    }
+  }
+  &.btn-review {
+    background-color: #deeeff;
+    color: #1c78e0;
+    &:hover {
+      background-color: #1c78e0;
+      color: #deeeff;
+    }
+  }
+  &.btn-specified {
+    background-color: #e9def8;
+    color: #722ed1;
+    &:hover {
+      background-color: #722ed1;
+      color: #e9def8;
+    }
+  }
+  &.btn-rejected {
+    background-color: #ffe3e3;
+    color: #ff0000;
+    &:hover {
+      background-color: #ff0000;
+      color: #ffe3e3;
+    }
+  }
+}

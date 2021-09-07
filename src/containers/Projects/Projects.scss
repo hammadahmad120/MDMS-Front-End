@@ -1,0 +1,48 @@
+@import "../../helpers/variables";
+.project-home-component {
+  .project-home-pane {
+    display: flex;
+    .project-content-pane {
+      flex: 1 1 auto;
+      max-width: 100%;
+      padding: 35px 15px 10px 28px;
+      margin-left: 242px;
+      @media (max-width: 600px) {
+        margin-left: 0;
+        padding-left: 15px;
+      }
+      .btn-primary {
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+    }
+
+    .row {
+      [class*="col-"] {
+        &:nth-child(3n),
+        &:last-child {
+          .dropdown-submenu {
+            left: -100% !important;
+          }
+        }
+      }
+      .card {
+        min-height: 315px;
+        margin-bottom: 20px;
+        .card-body {
+          flex: 0 1 auto;
+          .card-title {
+            margin-bottom: 26px;
+          }
+          .card-subtitle {
+            margin-bottom: 33px;
+            color: map-get($theme-colors, greyColor2);
+          }
+        }
+      }
+    }
+  }
+}

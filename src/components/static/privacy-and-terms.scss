@@ -1,0 +1,29 @@
+@import "../../helpers/variables";
+
+.privacy-policy-component,
+.terms-of-service-component {
+  margin: 4% 10%;
+  .zerodocs-logo {
+    margin-bottom: 40px;
+    width: 226px;
+  }
+  .privacy-terms-body {
+    p,
+    li {
+      font-size: 15px;
+      color: map-get($theme-colors, lightBlueColor2);
+    }
+    h5 {
+      font-size: 18px !important;
+      font-weight: bold !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    h6 {
+      font-size: 16px !important;
+      font-weight: bold !important;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
